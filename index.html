@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rimac Seguros - Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="img/logo1.png" alt="Rimac Logo" class="logo">
+        <div class="contact-icons">
+            <img src="img/phoneeiconn.png" alt="Phone Icon">
+            <img src="img/gmailicon.png" alt="Email Icon">
+            <img src="img/menuicon.png" alt="Menu Icon">
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>¡Desbloquea un mundo de oportunidades!</h1>
+        <p>Completa tu #RutadeInterés, conéctate y descubre todo lo que tenemos para ti.</p>
+        <img src="img/hero.png" alt="Hero Image" class="hero-image">
+    </section>
+
+    <section class="interest-routes">
+        <h2>Elige tu #RutadeInterés</h2>
+        <div class="options">
+            <div class="option"><img src="img/heart.png" alt="Icono Vida"> Vida</div>
+            <div class="option"><img src="img/heart.png" alt="Icono Salud"> Salud</div>
+            <div class="option"><img src="img/heart.png" alt="Icono Vehículo"> Vehículo</div>
+            <div class="option"><img src="img/heart.png" alt="Icono Hogar"> Hogar</div>
+            <div class="option"><img src="img/heart.png" alt="Icono Viajes"> Viajes</div>
+        </div>
+    </section>
+
+    <form class="challenges">
+        <div class="challenge step-1">
+            <div class="step-number">1</div>
+            <div class="challenge-content">
+                <h3>Reto APRENDE</h3>
+                <p>¿Sabías que? Un seguro de vida es el compromiso que te ofrece la aseguradora para garantizar la protección económica de tu familia en caso de que algo te ocurra. Al mismo tiempo, te ayuda a generar rentabilidad de tus ahorros según tus preferencias.</p>
+                <p>Para ti, ¿Qué es un seguro de vida?</p>
+                <ul>
+                    <li><input type="radio" name="seguro_vida" value="inversion"> Un tipo de inversión en la bolsa de valores.</li>
+                    <li><input type="radio" name="seguro_vida" value="beneficio_economico"> Es un contrato que proporciona un beneficio económico.</li>
+                    <li><input type="radio" name="seguro_vida" value="educacion_universitaria"> Ayuda a pagar para la educación universitaria.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="challenge step-2">
+            <div class="step-number">2</div>
+            <div class="challenge-content">
+                <h3>Reto ELIGE</h3>
+                <p>¿Sabías que? Los seguros de vida que ofrece Rimac se clasifican en 3 grupos.</p>
+                <p>¿Cuáles son de tu interés? Puedes marcar más de una opción.</p>
+                <ul>
+                    <li><input type="checkbox" name="interes" value="inversion"> Inversión</li>
+                    <li><input type="checkbox" name="interes" value="ahorro"> Ahorro</li>
+                    <li><input type="checkbox" name="interes" value="proteccion"> Protección</li>
+                </ul>
+            </div>
+        </div>
+        <div class="challenge step-3">
+            <div class="step-number">3</div>
+            <div class="challenge-content">
+                <h3>Reto BENEFICIA</h3>
+                <p>¿Sabías que? En Rimac Seguros, todos pueden beneficiarse por un seguro de vida, ante cualquier adversidad y así poder asegurar su estilo de vida.</p>
+                <p>A ti, ¿a quién te gustaría beneficiar?</p>
+                <ul>
+                    <li><input type="checkbox" name="beneficiario" value="familiares_directos"> Familiares Directos (padres, hijos)</li>
+                    <li><input type="checkbox" name="beneficiario" value="familiares_extendidos"> Familiares Extendidos (hermanos, tíos)</li>
+                    <li><input type="checkbox" name="beneficiario" value="entidades_beneficas"> Entidades Benéficas</li>
+                    <li><input type="checkbox" name="beneficiario" value="fideicomiso"> Fideicomiso</li>
+                    <li><input type="checkbox" name="beneficiario" value="otros"> Otros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="challenge step-4">
+            <div class="step-number">4</div>
+            <div class="challenge-content">
+                <h3>Reto ESTAR BIEN</h3>
+                <p>¿Sabías que? Puedes pertenecer a nuestra comunidad exclusiva de bienestar totalmente gratis. Aprovecha estos servicios esenciales y sé la mejor versión de ti.</p>
+                <p>Selecciona en cuáles te gustaría participar</p>
+                <ul>
+                    <li><input type="checkbox" name="bienestar" value="clases"> Clases y talleres en vivo con expertos destacados.</li>
+                    <li><input type="checkbox" name="bienestar" value="videos"> Videos de bienestar a tu disposición en todo momento.</li>
+                    <li><input type="checkbox" name="bienestar" value="rutas"> Rutas básicas de bienestar personalizadas para ti.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="challenge step-5">
+            <div class="step-number">5</div>
+            <div class="challenge-content">
+                <h3>Reto CONÉCTEMOS</h3>
+                <p>Completa tus datos para recibir información personalizada.</p>
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </div>
+        <div class="challenge step-6">
+            <div class="step-number">6</div>
+            <div class="challenge-content">
+                <h3>Reto CONFIRMA</h3>
+                <p>Acepta y descubre un mundo de beneficios, ¡trabajamos con transparencia para tu tranquilidad!</p>
+                <label>
+                    <input type="checkbox" name="terms" required> Acepto las Políticas de Privacidad y Políticas Comunicaciones Comerciales
+                </label>
+                <button type="submit">Finalizar</button>
+            </div>
+        </div>
+    </form>
+
+    <footer class="footer">
+        <img src="img/logo1.png" alt="Rimac Logo">
+        <div class="emergency-numbers">
+            <p>Emergencias al 01 411 1111</p>
+            <p>Emergencias al 01 411 1111</p>
+        </div>
+        <p>&copy; 2024 RIMAC Seguros y Reaseguros. RUC 20100043193 | RIMAC S.A. Entidad Prestadora de Salud. RUC 20481898920.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

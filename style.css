@@ -2,68 +2,163 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
+}
+
+
+.header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ff4e00, #e500ff);
 }
 
-.container {
-    width: 90%;
-    max-width: 500px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.header .logo {
+    height: 40px;
+}
+
+.header .contact-icons img {
+    margin-left: 10px;
+    height: 30px;
+}
+
+
+.hero {
     text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #ff4e00, #e500ff);
+    color: white;
 }
 
-h1, h2 {
-    color: #333;
+.hero h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-.question{
-    display: grid;
-}
-
-.icon-container{
-    display: inline-flex;
-}
-.question, .personal-info {
+.hero p {
+    font-size: 1.2em;
     margin-bottom: 20px;
 }
 
-.question p, .personal-info label {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    text-align: left;
+.hero .hero-image {
+    max-width: 100%;
+    height: auto;
 }
 
-.question label, .personal-info input {
-    display: block;
-    margin-bottom: 10px;
-    text-align: left;
+/* Interest routes */
+.interest-routes {
+    text-align: center;
+    padding: 20px;
 }
 
-.personal-info input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+.interest-routes .options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
+.interest-routes .option {
+    margin: 10px;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.interest-routes .option img {
+    margin-right: 10px;
+    height: 30px;
+}
+
+.step-number {
+    position: absolute;
+    left: -40px; 
+    top: 20px; 
+    background-color: #ff0000;
     color: white;
-    border: none;
-    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.2em;
-    cursor: pointer;
+    z-index: 1; 
 }
 
-button:hover {
-    background-color: #0056b3;
+.step-number.active {
+    background-color: #00ff00;
+}
+
+.step-number::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: calc(100% + 50px); 
+    background: linear-gradient(to bottom, transparent 50%, #ff0000 50%); 
+    background-size: 100% 10px; 
+    background-position: center; 
+    left: 50%; 
+    top: 100%; 
+    transform: translateX(-50%); 
+    z-index: -1;
+    box-sizing: border-box; 
+}
+
+.step-number:last-child::after {
+    display: none; 
+}
+/* Challenges */
+.challenges {
+    margin-left: 60px;
+    padding: 20px;
+}
+
+.challenge {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.challenge h3 {
+    margin-top: 0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+.footer .emergency-numbers p {
+    margin: 5px 0;
+}
+
+.challenge-content button[type="submit"] {
+    background-color: #ff0000; /* Color de fondo rojo */
+    color: white; /* Color de texto blanco */
+    font-size: 1.5em; /* Tamaño de fuente más grande */
+    padding: 15px 30px; /* Espaciado interno del botón */
+    border: none; /* Borde no deseado */
+    display: block; /* Bloque para ocupar el ancho disponible */
+    margin: 20px auto; /* Margen superior e inferior automático, y centrado horizontal */
+    position: relative; /* Posición relativa para permitir posicionamiento absoluto del borde inferior */
+}
+
+.challenge-content button[type="submit"]:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000; 
+    bottom: -10px; 
+    left: 0; 
 }
